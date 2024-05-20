@@ -1,0 +1,34 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# Removes seed from game_win screen
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = "create_UIBox_round_scores_row('seed', G.C.WHITE),"
+position = "at"
+payload = " "
+match_indent = true
+overwrite = true
+
+# Removes copy_seed button from game_win screen
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = "UIBox_button({button = 'copy_seed', label = {localize('b_copy')}, colour = G.C.BLUE, scale = 0.3, minw = 2.3, minh = 0.4,}),"
+position = "at"
+payload = " "
+match_indent = true
+overwrite = true
+
+# Adds seed to game_loss screen
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = "UIBox_button({button = 'copy_seed', label = {localize('b_copy')}, colour = G.C.BLUE, scale = 0.3, minw = 2.3, minh = 0.4, focus_args = {nav = 'wide'}}),"
+position = "before"
+payload = "create_UIBox_round_scores_row('seed', G.C.WHITE),"
+match_indent = true
+overwrite = false
