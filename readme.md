@@ -1,5 +1,5 @@
 # RUN.MASTER
-** OFFICIAL BALATRO.RECORDS MOD **
+**OFFICIAL BALATRO.RECORDS MOD**
 
 # How to install: 
 1. Install [lovely](https://github.com/ethangreen-dev/lovely-injector).
