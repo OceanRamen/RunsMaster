@@ -1,5 +1,4 @@
-# RUN.MASTER
-**BALATRO.RECORDS MOD**
+![runmasterLogo](runmasterLogo.png)
 
 # How to install: 
 1. Install [lovely](https://github.com/ethangreen-dev/lovely-injector).
